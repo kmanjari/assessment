@@ -29,9 +29,7 @@ Route::post('hotel/{id}/comment', 'HotelController@postComment');
 
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function()
 {
-    Route::get('/', 'AdminController@index');
-
-    Route::get('/create', 'AdminController@create');
+    Route::get('/', 'AdminController@create');
 
     Route::post('/create', 'AdminController@store');
 });
