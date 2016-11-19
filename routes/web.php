@@ -31,5 +31,5 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function()
 {
     Route::get('/', 'AdminController@create');
 
-    Route::post('/create', 'AdminController@store');
+    Route::post('/', 'AdminController@store');
 });

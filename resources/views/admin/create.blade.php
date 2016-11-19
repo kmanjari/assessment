@@ -8,11 +8,11 @@
         {!! Form::open() !!}
         <div class="col-md-6 col-md-offset-3">
 
-            <div class="mw1000 center-block">
-                @if(session('message'))
+            @if(session('message'))
+                <div class="alert alert-info">
                     {{session('message')}}
-                @endif
-            </div>
+                </div>
+            @endif
 
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <label for="name">Name</label>
